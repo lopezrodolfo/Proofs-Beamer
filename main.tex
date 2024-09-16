@@ -1,0 +1,196 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usepackage{graphicx} % Required for inserting images
+
+\title[Proving Mathematical Statements]{Proving Mathematical Statements}
+\author[Rodolfo Lopez]{Rodolfo Lopez} 
+\date[April 2023]{April 2023}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Overview}
+\begin{itemize}
+    \item<1-> A statement is a proposition that is either true or false.
+    \pause
+    \item<2-> Proofs are used to establish whether a statement is true or false. 
+    \pause
+    \item<3-> Four proof methods are: direct proof, proof by contrapositive, proof by contradiction, and proof by induction. 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Motivation}
+Proving mathematical statements...
+\pause
+\begin{itemize}
+    \item<1-> Ensures the correctness of mathematical ideas and helps to avoid errors in practical applications
+    \pause
+    \item<2-> Helps to advance our understanding of mathematical concepts and their relationships
+    \pause
+    \item<3-> Can lead to new discoveries and innovations that can have significant impacts in various fields
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Direct Proof}
+A direct proof shows that an if-then statement is true by providing a logical chain of reasoning from the premises to the conclusion.
+\end{frame}
+
+\begin{frame}{Direct Proof Structure}
+\begin{enumerate}
+    \item<1-> State the hypothesis or premise of the statement to be proved.
+    \pause
+    \item<2-> State any definitions or axioms that are relevant.
+    \pause
+    \item<3-> Use logical reasoning to deduce the conclusion from the premises and definitions.
+    \pause
+    \item<4-> State the conclusion and conclude the proof.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Direct Proof Example}
+Prove that if $a$ and $b$ are odd integers, then $a+b$ is even.
+\pause 
+\begin{enumerate}
+    \item<1-> Let $a$ and $b$ be odd integers.
+    \pause
+    \item<2-> By definition, an odd integer can be written as $2n+1$, where $n$ is an integer.
+    \pause
+    \item<3-> So, we can write $a=2n_1+1$ and $b=2n_2+1$ for some integers $n_1$ and $n_2$.
+    \pause
+    \item<4-> Therefore, $a+b=2n_1+1+2n_2+1=2(n_1+n_2+1)$, which is even by definition.
+    \pause
+    \item<5-> Hence, if $a$ and $b$ are odd integers, then $a+b$ is even.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Proof by Contrapositive}
+A proof by contrapositive is a proof that establishes the truth of an if-then statement by proving the truth of its contrapositive. The contrapositive of an if-then statement is formed by negating both the hypothesis and the conclusion and reversing the direction of the implication. 
+\end{frame}
+
+\begin{frame}{Proof by Contrapositive Structure}
+\begin{enumerate}
+    \item<1-> State the contrapositive of the statement to be proved.
+    \pause
+    \item<2-> Assume the negated conclusion is true.
+    \pause
+    \item<3-> Use direct proof to show that the negated hypothesis must also be true.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Proof by Contrapositive Example}
+Prove that if $n$ is an integer and $n^2$ is even, then $n$ is even.
+\pause
+\begin{enumerate}
+    \item<1-> The contrapositive of the statement is: If $n$ is an odd integer, then $n^2$ is odd.
+    \pause
+    \item<2-> Assume that $n$ is an odd integer.
+    \pause
+    \item<3-> By definition, an odd integer can be written as $2k+1$, where $k$ is an integer.
+    \pause
+    \item<4-> So, $n^2=(2k+1)^2=4k^2+4k+1=2(2k^2+2k)+1$ is odd.
+    \pause
+    \item<5-> Hence, if $n$ is an odd integer, then $n^2$ is odd.
+    \pause
+    \item<6-> By proving the contrapositive, we have shown that if $n^2$ is even, then $n$ must be even.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Proof by Contradiction}
+A proof by contradiction is a proof that establishes the truth of a statement by assuming its negation and then deriving a contradiction. 
+\end{frame}
+
+\begin{frame}{Proof by Contradiction Structure}
+\begin{enumerate}
+\item<1-> Assume the negation of the statement to be proved.
+\pause
+\item<2-> Use logical reasoning to derive a contradiction.
+\pause
+\item<3-> Conclude that the original statement must be true.
+\end{enumerate}
+\end{frame}
+
+{\small
+\begin{frame}
+\frametitle{Proof by Contradiction Example}
+Prove that $\sqrt{2}$ is irrational.
+\pause
+\begin{enumerate}
+    \item<1-> Assume that $\sqrt{2}$ is rational, i.e., it can be expressed as a fraction in lowest terms, $\sqrt{2}=\frac{p}{q}$, where $p$ and $q$ are integers with no common factors.
+    \pause
+    \item<2-> Squaring both sides of the equation, we get $2=\frac{p^2}{q^2}$.
+    \pause
+    \item<3->Multiplying both sides by $q^2$, we get $2q^2=p^2$.
+    \pause
+    \item<4-> Since $p^2$ is even, $p$ must be even. [by Example 2]
+    \pause
+    \item<5-> Let $p=2k$ for some integer $k$.
+    \pause
+    \item<6-> Substituting this into the previous equation, we get $2q^2=(2k)^2=4k^2$, which implies that $q^2=2k^2$.
+    \pause
+    \item<7-> Since $q^2$ is even, $q$ must also be even. [by Example 2]
+    \pause
+    \item<8-> But this contradicts our assumption that $p$ and $q$ have no common factors, since they are both even.
+    \pause
+    \item<9-> Therefore, our assumption that $\sqrt{2}$ is rational must be false, and $\sqrt{2}$ is irrational.
+\end{enumerate}
+\end{frame}
+}
+
+\begin{frame}
+\frametitle{Proof by Induction}
+A proof by induction is a method of proof that establishes the truth of a statement for all natural numbers (or all integers greater than some fixed integer) by proving it for a base case and then showing that if the statement is true for some integer $n$, then it must also be true for $n+1$.
+\end{frame}
+
+\begin{frame}
+\frametitle{Proof by Induction Structure}
+\begin{enumerate}
+    \item<1-> Prove the statement for a base case (usually $n=1$ or $n=0$).
+    \pause
+    \item<2-> Assume that the statement is true for $n=k$.
+    \pause
+    \item<3-> Show that it must also be true for $n=k+1$.
+    \pause
+    \item<4-> Conclude that the statement is true for all natural numbers $n$.
+\end{enumerate}
+\end{frame}
+
+{\small
+\begin{frame}
+\frametitle{Proof by Induction Example}
+Prove that for all natural numbers $n$, $1+2+\cdots+n=\frac{n(n+1)}{2}$.
+\pause
+\begin{enumerate}
+    \item<1-> Base case: When $n=0$, the left-hand side of the equation is $0$, and the right-hand side is $\frac{0(0+0)}{2}=0$. Therefore, the statement is true for $n=0$.
+    \pause
+    \item<2-> Assume that the statement is true for $n=k$, i.e., $1+2+\cdots+k=\frac{k(k+1)}{2}$.
+    \pause
+    \item<3-> Consider the case when $n=k+1$. We have:
+    {\tiny\
+    \begin{align*}
+    1+2+\cdots+k+(k+1) = \frac{k(k+1)}{2}+(k+1) \
+    = \frac{k(k+1)+2(k+1)}{2} \
+    = \frac{(k+1)(k+2)}{2} \
+    = \frac{(k+1)((k+1)+1)}{2}.
+    \end{align*}
+    }
+    \pause
+    \item<4-> This shows that if the statement is true for $n=k$, then it must also be true for $n=k+1$.
+    \pause
+    \item<5-> Therefore, by the principle of mathematical induction, the statement is true for all natural numbers $n$.
+\end{enumerate}
+
+\end{frame}
+}
+
+\begin{frame}
+\centering
+\Huge Thank You!
+\end{frame}
+
+\end{document}
